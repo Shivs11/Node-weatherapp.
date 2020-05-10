@@ -22,7 +22,7 @@ weatherform.addEventListener('submit', (event) => {
     }
     else{
         messagetwo.textContent = 'Loading....'
-        fetch('http://api.weatherstack.com/current?access_key=2d7944100448dbf24f7ae2649c2ad4cf&query=' + search_val)
+        fetch('/weather?address=' + search_val)
         .then((response) => {
             return response.json();
         })

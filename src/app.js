@@ -10,7 +10,7 @@ const viewspath = path.join(__dirname, '../Templates/views');
 const partials = path.join(__dirname, '../Templates/partials')
 
 const app = express();
-
+const port = process.env.PORT || 3000
 
 
 // Setting up handlebars engine and views location.
@@ -95,6 +95,6 @@ app.get('*', (req,res) => {
 })
 //Starting the server.
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("The server is up!");
 });
